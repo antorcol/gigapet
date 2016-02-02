@@ -1,0 +1,33 @@
+This project was part of the beginning Udemy.com iPhone course I took, "iOS 9 and Swift 2: From Beginner to Paid Professional," by Mark Price, lectures 53-57.
+
+Features:
+
+Multiple ViewControllers.
+Drag and drop images.
+Synchronized music and sound effects.
+Uses size classes for item layouts in portrait vs landscape mode.
+
+Issues:
+
+1. The monster image canvases were much larger than the contained image. The instruction
+    video said nothing about this, and to get the image to show on all screens, you had to
+    do some odd offset positioning. I fixed this by using Gimp to trim all the graphics.
+
+    It wasn't until later that I found there was an unstated reason for this offset. The
+    monster takes a radically different shape, and the excess canvas size enabled a consistent
+    scaling throughout this change. I had to go back and re-do the monster graphics to fix.
+
+2. This same issue affected the extended assignment. Choosing the new characters, which have
+    different sizes and aspect ratios, caused them to appear off center.
+
+3. In landscape mode, with the original monster, double-clicking the heart or meat
+    acts like dragging. Doesn't work in portrait or with the newer characters. I did a bit
+    of surgery on the original monster graphics
+
+4. Originally, both the grub and luv images are avialable at the start of the game,
+    enabling the user to choose how to make the monster happy. I took the randomized code
+    and put it into a separate function, and called that rom ViewController.viewDidLoad.
+
+5. I used a prev/next navigator to enable the user to pick a custom character. I'd wanted to
+    display all three, but due to the character base images all being different sizes, the
+    layouts would never line up. So I went with the single button select.
